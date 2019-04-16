@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="8.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Mappings\" />
+    <Folder Include="Infrastructure\" />
+    <Folder Include="Models\RuleSet\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Services\FarmSensorService.cs" />
+    <Compile Remove="Services\IoTomatoesContext.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Models\RuleSetDTO.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IoTomatoes.Core\IoTomatoes.Domain.csproj" />
+  </ItemGroup>
+</Project>
